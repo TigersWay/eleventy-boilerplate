@@ -1,0 +1,8 @@
+# humanstxt.org/
+
+/* TEAM */
+  Architect & Developer: Ben Michaud (https://github.com/tigersway or https://tigersway.net)
+  From: Bangkok, Thailand
+
+/* THANKS */
+  Made with help from Eleventy (11ty)

@@ -1,0 +1,36 @@
+{
+  "name": "eleventy-boilerplate",
+  "description": "Eleventy boilerplate",
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "tailwindcss"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Ben Michaud <ben@tigersway.net>",
+  "scripts": {
+    "start": "NODE_ENV=development concurrently -c green,cyan,yellow npm:dev:* --kill-others",
+    "prestart": "rm -rf ./public",
+    "dev:11ty": "eleventy --serve --quiet",
+    "dev:css": "tailwind --input ./site/_theme/css/styles.css --output ./public/css/styles.min.css --postcss --watch",
+    "build": "NODE_ENV=production concurrently -c green,cyan,yellow npm:build:* --kill-others-on-fail",
+    "prebuild": "rm -rf ./build",
+    "build:11ty": "eleventy --output build --quiet --pathprefix $PATHPREFIX",
+    "build:css": "tailwind --input ./site/_theme/css/styles.css --output ./build/css/styles.min.css --postcss --minify",
+    "prod-preview": "npx http-server build -o --gzip --brotli"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "fast-glob": "^3.2.12",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-link-attributes": "^4.0.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
+  }
+}

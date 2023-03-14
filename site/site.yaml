@@ -1,0 +1,5 @@
+site:
+  title: eleventy-boilerplate
+  description: Eleventy boilerplate
+
+layout: html.njk

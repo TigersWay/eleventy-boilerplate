@@ -1,0 +1,16 @@
+{
+  "npm.scriptExplorerExclude": [
+    "^pre",
+    "^post",
+    ":"
+  ],
+  "markdownlint.config": {},
+  "cSpell.words": [
+    "brotli",
+    "eleventy",
+    "humanstxt",
+    "lstrip",
+    "noopener",
+    "robotstxt"
+  ]
+}
